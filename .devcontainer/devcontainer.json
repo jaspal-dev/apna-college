@@ -15,14 +15,14 @@
 		"../Docker/ComposeFiles/compose.yaml"
 	],
 	"mounts": [
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/jaspal/.ssh/,readonly,type=bind",
-		"source=${localWorkspaceFolder},target=/home/jaspal/development,type=bind"
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh/,readonly,type=bind",
+		"source=${localWorkspaceFolder},target=/root/development,type=bind"
 	],
 	"name": "Apna College",
 	"postCreateCommand": "./.devcontainer/setup.sh",
 	"remoteUser": "root",
 	"service": "apna-college-java",
-	"workspaceFolder": "/home/jaspal/development",
+	"workspaceFolder": "/root/development",
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	}
