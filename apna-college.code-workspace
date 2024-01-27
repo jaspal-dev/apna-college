@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "programs"
+		}
+	],
+	"settings": {
+		"editor.formatOnSave": true,
+		"[java]": {
+			"editor.defaultFormatter": "redhat.java"
+		},
+		"material-icon-theme.activeIconPack": "angular",
+		"material-icon-theme.folders.associations": {
+			"programs": "Config",
+			"java-programs": "Java"
+		},
+	}
+}

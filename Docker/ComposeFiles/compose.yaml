@@ -1,0 +1,24 @@
+services:
+  apna-college-java:
+    image: apna-college-java:v1
+    container_name: apna-college-java
+    build:
+      context: ../DockerFiles
+      dockerfile: java.Dockerfile
+      args:
+        BASE_IMAGE_NAME: ${BASE_IMAGE_NAME}
+        BASE_IMAGE_VERSION: ${BASE_IMAGE_VERSION}
+        JDK_VERSION: ${JDK_VERSION}
+        USER_NAME: ${USER_NAME}
+    volumes:
+      - type: bind
+        source: ../../programs/${JAVA_PRACTICE_FOLDER_NAME}
+        target: /home/${USER_NAME}/programs/${JAVA_PRACTICE_FOLDER_NAME}
+    networks:
+      - apna-college-java
+    stdin_open: true
+    tty: true
+networks:
+  apna-college-java:
+    driver: bridge
+    name: apna-college-java

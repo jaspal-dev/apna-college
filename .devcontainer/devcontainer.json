@@ -1,0 +1,26 @@
+{
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"redhat.java",
+				"adpyke.codesnap",
+				"ms-azuretools.vscode-docker",
+				"PKief.material-icon-theme"
+			]
+		}
+	},
+	"dockerComposeFile": [
+		"../Docker/ComposeFiles/compose.yaml"
+	],
+	"mounts": [
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/jaspal/.ssh/,readonly,type=bind",
+		"source=${localWorkspaceFolder},target=/home/jaspal/development,type=bind"
+	],
+	"name": "Apna College",
+	"service": "apna-college-java",
+	"workspaceFolder": "/home/jaspal/development",
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	}
+}
