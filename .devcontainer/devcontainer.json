@@ -6,7 +6,8 @@
 				"redhat.java",
 				"adpyke.codesnap",
 				"ms-azuretools.vscode-docker",
-				"PKief.material-icon-theme"
+				"PKief.material-icon-theme",
+				"Gruntfuggly.todo-tree"
 			]
 		}
 	},
@@ -18,6 +19,8 @@
 		"source=${localWorkspaceFolder},target=/home/jaspal/development,type=bind"
 	],
 	"name": "Apna College",
+	"postCreateCommand": "./.devcontainer/setup.sh",
+	"remoteUser": "root",
 	"service": "apna-college-java",
 	"workspaceFolder": "/home/jaspal/development",
 	"features": {
