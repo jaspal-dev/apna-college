@@ -9,8 +9,7 @@ ARG JDK_VERSION
 ARG USER_NAME
 
 RUN apt-get -y update && \
-    apt-get -y upgrade && \
-    apt-get install -y openssh-client
+    apt-get -y upgrade
 
 RUN apt-get -y install openjdk-${JDK_VERSION}-jdk
 
